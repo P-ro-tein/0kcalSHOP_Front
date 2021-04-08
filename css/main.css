@@ -76,15 +76,6 @@ input:-ms-input-placeholder {color: #a8a8a8;}
 input::-webkit-input-placeholder {color: #a8a8a8;}
 input::-moz-placeholder {color: #a8a8a8;}
 
-input{
-    outline: none;
-    border:0px;
-    
-    float: left;
-    width: 500px;
-    height: 30px;
-    float: inline-start;
-}
 
 #search-input{
     margin-left: 8px;
@@ -115,6 +106,7 @@ input{
     display: inline-block;
 }
 #id {
+
     outline: 0;
     width: 110px;
     border: 0;
@@ -122,6 +114,10 @@ input{
     box-sizing: border-box;
     border: 1px solid rgb(216, 216, 216);
     font-size: 0.7rem;
+
+    outline: none; 
+    float: left;
+
 }
 #pw {
     width: 110px;
@@ -130,6 +126,8 @@ input{
     box-sizing: border-box;
     font-size: 0.7rem;
     border: 1px solid rgb(216, 216, 216);
+    outline: none; 
+    float: left;
 }
 #logbutton {
     position: relative;
@@ -138,7 +136,7 @@ input{
     outline: 0;
     background: rgb(255, 111, 97);
     width: 65px;
-    height: 66px;
+    height: 40px;
     border: 0;
     color: #FFFFFF;
     font-size: 14px;
@@ -216,16 +214,61 @@ width: 1140px;
     color: rgb(141, 141, 141);
 }
 
-#slick {
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
+.slider {
+    width: 500%;
+    height: 406px;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition:2s;
+}
+
+.slider img{
     width: 100%;
     height: 405px;
-    background-color: thistle;
+}
+
+.slider input{
+    display: none;
+}
+
+.navigation-manual{
+    position: absolute;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.manual-btn{
+    border: 1.5px solid black;
+    padding:5px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition:1s;
+    margin-right: 10px;
+}
+
+.manual-btn:hover{
+    background-color: black;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
 }
 
 #product-container{
@@ -233,10 +276,41 @@ width: 1140px;
     text-align: center;
 }
 
+.navigation-auto{
+    position: absolute;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation-auto div{
+    border: 1.5px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    transition: 1s;
+    margin-right: 10px;
+} 
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+
 #set-products{
     margin: 25px 70px 25px 70px;
-    width: 1140px;
-
+    width: 1140px;  
 }
 
 #product-ul{
