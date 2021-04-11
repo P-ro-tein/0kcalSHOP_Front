@@ -32,14 +32,14 @@
                     id="search-key">도시락</a> | <a href="#" id="search-key">다이어트</a>
             </div>
         </div>
-        <form id="login-box">
+        <form id="login-box" name="loginForm" method = "post" action = "test.php" onsubmit="return login()">
             <div id="input-box">
                 <div>
                     <input id="id" type="text" placeholder="ID" />
                     <input id="pw" type="password" placeholder="PASSWORD" />
                 </div>
                 <div>
-                    <button id="logbutton">login</button>
+                    <button type="submit" id="logbutton" >login</button>
                 </div>
             </div>
             <div class="registe">Not registered? <a id="goregist" href="#">Create an account</a></div>
@@ -55,8 +55,8 @@
         </ul>
     </div>
 
-    <div style="overflow: hidden;">
-        <div class="slider">
+    <div style="overflow: hidden;" >
+        <div class="slider" >
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
@@ -76,14 +76,14 @@
             </div>
         
         </div>
-        <div class="navigation-auto">
+        <div class="navigation-auto" >
             <div class="auto-btn1"></div>
             <div class="auto-btn2"></div>
             <div class="auto-btn3"></div>
             <div class="auto-btn4"></div>
     
         </div>
-        <div class="navigation-manual">
+        <div class="navigation-manual" >
             <label for="radio1" class="manual-btn"></label>
             <label for="radio2" class="manual-btn"></label>
             <label for="radio3" class="manual-btn"></label>
